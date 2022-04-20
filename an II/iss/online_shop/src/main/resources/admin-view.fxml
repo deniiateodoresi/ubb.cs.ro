@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <children>
+      <TableView fx:id="productTable" layoutX="42.0" layoutY="121.0" prefHeight="426.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="136.0" text="Nume" />
+          <TableColumn fx:id="category" prefWidth="103.0" text="Categorie" />
+            <TableColumn fx:id="size" prefWidth="95.0" text="Marime" />
+            <TableColumn fx:id="price" prefWidth="77.0" text="Pret" />
+            <TableColumn fx:id="quantity" prefWidth="112.0" text="Stoc" />
+        </columns>
+      </TableView>
+      <Label layoutX="214.0" layoutY="47.0" text="Magazin Online de Haine - Acces Administrator">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="611.0" layoutY="139.0" text="Nu ai selectat niciun produs!">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="621.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Adaugă produs" />
+      <Label layoutX="589.0" layoutY="211.0" text="Nume:" />
+      <Label layoutX="589.0" layoutY="248.0" text="Categorie:" />
+      <Label layoutX="589.0" layoutY="291.0" text="Marime:" />
+      <Label layoutX="589.0" layoutY="332.0" text="Pret:" />
+      <Label layoutX="588.0" layoutY="368.0" text="Cantitate:" />
+      <Button disable="true" layoutX="621.0" layoutY="481.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Sterge un produs" />
+      <Button disable="true" layoutX="621.0" layoutY="522.0" mnemonicParsing="false" text="Actualizeaza un produs" />
+      <TextField layoutX="655.0" layoutY="207.0" />
+      <ComboBox layoutX="654.0" layoutY="244.0" prefWidth="150.0" promptText="Categorie" />
+      <ComboBox layoutX="655.0" layoutY="287.0" prefWidth="150.0" promptText="Marime" />
+      <TextField layoutX="655.0" layoutY="328.0" />
+      <TextField layoutX="656.0" layoutY="364.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CartController">
+   <children>
+      <TableView fx:id="cartProducts" layoutX="42.0" layoutY="121.0" prefHeight="297.0" prefWidth="413.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="136.0" text="Nume" />
+          <TableColumn fx:id="category" prefWidth="103.0" text="Categorie" />
+            <TableColumn fx:id="size" prefWidth="95.0" text="Marime" />
+            <TableColumn fx:id="price" prefWidth="77.0" text="Pret" />
+        </columns>
+      </TableView>
+      <Label layoutX="332.0" layoutY="58.0" text="Coș de cumpărături">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button onAction="#handleBackToCatalogClick" layoutX="681.0" layoutY="22.0" mnemonicParsing="false" text="Înapoi la catalog" />
+      <Button layoutX="415.0" layoutY="511.0" mnemonicParsing="false" text="Plasează comanda">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="500.0" layoutY="135.0" text="Detalii livrare">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="507.0" layoutY="171.0" text="Judet: " />
+      <Label layoutX="505.0" layoutY="200.0" text="Localitate:" />
+      <Label layoutX="506.0" layoutY="230.0" text="Strada:" />
+      <Label layoutX="505.0" layoutY="261.0" text="Numar:" />
+      <Label layoutX="504.0" layoutY="307.0" text="Detalii card">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="338.0" text="Numar Card:" />
+      <Label layoutX="508.0" layoutY="374.0" text="Data expirare:" />
+      <Label layoutX="508.0" layoutY="410.0" text="Cod validare:" />
+      <TextField layoutX="574.0" layoutY="167.0" />
+      <TextField layoutX="574.0" layoutY="196.0" />
+      <TextField layoutX="574.0" layoutY="226.0" />
+      <TextField layoutX="574.0" layoutY="257.0" />
+      <TextField layoutX="589.0" layoutY="334.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker layoutX="589.0" layoutY="370.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField layoutX="589.0" layoutY="406.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label layoutX="249.0" layoutY="456.0" prefHeight="25.0" prefWidth="114.0" text="Total:          " textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="431.0" text="Număr produse: ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="nrProducts" alignment="CENTER_RIGHT" layoutX="381.0" layoutY="431.0" prefHeight="25.0" prefWidth="74.0" text="Label" textAlignment="RIGHT" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPrice" alignment="CENTER_RIGHT" layoutX="307.0" layoutY="456.0" prefHeight="25.0" prefWidth="149.0" text="Label" textAlignment="RIGHT" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

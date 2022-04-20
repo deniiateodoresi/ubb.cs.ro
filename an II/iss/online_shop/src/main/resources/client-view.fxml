@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientController">
+   <children>
+      <TableView fx:id="productTable" onMouseClicked="#handleTableClicked" layoutX="42.0" layoutY="121.0" prefHeight="426.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="136.0" text="Nume" />
+          <TableColumn fx:id="category" prefWidth="103.0" text="Categorie" />
+            <TableColumn fx:id="size" prefWidth="95.0" text="Marime" />
+            <TableColumn fx:id="price" prefWidth="77.0" text="Pret" />
+            <TableColumn fx:id="quantity" prefWidth="112.0" text="Stoc" />
+        </columns>
+      </TableView>
+      <Label layoutX="265.0" layoutY="57.0" text="Catalog Magazin Online de Haine">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="681.0" layoutY="22.0" mnemonicParsing="false" text="Coș de cumpărături" />
+      <Label fx:id="selectionLabel" layoutX="615.0" layoutY="231.0" text="Nu ai selectat niciun produs!">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button onAction="#handleAddToCartClick" layoutX="650.0" layoutY="396.0" mnemonicParsing="false" text="Adaugă în coș" />
+   </children>
+</AnchorPane>
