@@ -1,25 +1,36 @@
 package model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "product")
 public class Product implements Serializable {
     private Integer id;
     private String name;
+    private Category category;
     private Size size;
     private Float price;
-    private Category category;
     private Integer quantity;
     private ProductStatus status;
 
-    public Product(String name, Size size, Float price, Category category, Integer quantity, ProductStatus status) {
+    public Product(String name, Category category, Size size, Float price, Integer quantity) {
         this.name = name;
+        this.category = category;
         this.size = size;
         this.price = price;
-        this.category = category;
         this.quantity = quantity;
-        this.status = status;
     }
 
+    public Product() {
+
+    }
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     public Integer getId() {
         return id;
     }
@@ -36,6 +47,7 @@ public class Product implements Serializable {
         this.name = name;
     }
 
+    @Enumerated(EnumType.STRING)
     public Size getSize() {
         return size;
     }
@@ -52,6 +64,7 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    @Enumerated(EnumType.STRING)
     public Category getCategory() {
         return category;
     }
@@ -68,6 +81,7 @@ public class Product implements Serializable {
         this.quantity = quantity;
     }
 
+    @Transient
     public ProductStatus getStatus() {
         return status;
     }

@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
    <children>
-      <TableView fx:id="productTable" layoutX="42.0" layoutY="121.0" prefHeight="426.0" prefWidth="524.0">
+      <TableView fx:id="productTable" layoutX="42.0" layoutY="121.0" onMouseClicked="#handleSelectedProduct" prefHeight="426.0" prefWidth="524.0">
         <columns>
           <TableColumn fx:id="name" prefWidth="136.0" text="Nume" />
           <TableColumn fx:id="category" prefWidth="103.0" text="Categorie" />
@@ -25,23 +25,18 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="611.0" layoutY="139.0" text="Nu ai selectat niciun produs!">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Button layoutX="621.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Adaugă produs" />
-      <Label layoutX="589.0" layoutY="211.0" text="Nume:" />
-      <Label layoutX="589.0" layoutY="248.0" text="Categorie:" />
-      <Label layoutX="589.0" layoutY="291.0" text="Marime:" />
-      <Label layoutX="589.0" layoutY="332.0" text="Pret:" />
-      <Label layoutX="588.0" layoutY="368.0" text="Cantitate:" />
-      <Button disable="true" layoutX="621.0" layoutY="481.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Sterge un produs" />
-      <Button disable="true" layoutX="621.0" layoutY="522.0" mnemonicParsing="false" text="Actualizeaza un produs" />
-      <TextField layoutX="655.0" layoutY="207.0" />
-      <ComboBox layoutX="654.0" layoutY="244.0" prefWidth="150.0" promptText="Categorie" />
-      <ComboBox layoutX="655.0" layoutY="287.0" prefWidth="150.0" promptText="Marime" />
-      <TextField layoutX="655.0" layoutY="328.0" />
-      <TextField layoutX="656.0" layoutY="364.0" />
+      <Button fx:id="addButton" layoutX="624.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleAddProduct" prefHeight="25.0" prefWidth="139.0" text="Adaugă produs" />
+      <Label layoutX="589.0" layoutY="169.0" text="Nume:" />
+      <Label layoutX="589.0" layoutY="206.0" text="Categorie:" />
+      <Label layoutX="589.0" layoutY="249.0" text="Marime:" />
+      <Label layoutX="589.0" layoutY="290.0" text="Pret:" />
+      <Label layoutX="588.0" layoutY="326.0" text="Cantitate:" />
+      <Button fx:id="deleteButton" disable="true" layoutX="624.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleDeleteProduct" prefHeight="25.0" prefWidth="139.0" text="Sterge un produs" />
+      <Button fx:id="updateButton" disable="true" layoutX="624.0" layoutY="488.0" mnemonicParsing="false" onAction="#handleUpdateProduct" text="Actualizeaza un produs" />
+      <TextField fx:id="productName" layoutX="655.0" layoutY="165.0" />
+      <ComboBox fx:id="categories" layoutX="654.0" layoutY="202.0" prefWidth="150.0" promptText="Categorie" />
+      <ComboBox fx:id="sizes" layoutX="655.0" layoutY="245.0" prefWidth="150.0" promptText="Marime" />
+      <TextField fx:id="productPrice" layoutX="655.0" layoutY="286.0" />
+      <TextField fx:id="productQuantity" layoutX="656.0" layoutY="322.0" />
    </children>
 </AnchorPane>

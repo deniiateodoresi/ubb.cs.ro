@@ -1,7 +1,12 @@
 package model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "admin")
 public class Administrator implements Serializable {
 
     private String username;
@@ -13,6 +18,10 @@ public class Administrator implements Serializable {
         this.password = password;
     }
 
+    public Administrator() {
+
+    }
+
     public String getPassword() {
         return password;
     }
@@ -21,6 +30,7 @@ public class Administrator implements Serializable {
         this.password = password;
     }
 
+    @Column(name = "email")
     public String getUsername() {
         return username;
     }
@@ -29,6 +39,10 @@ public class Administrator implements Serializable {
         this.username = username;
     }
 
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     public Integer getNumber() {
         return number;
     }

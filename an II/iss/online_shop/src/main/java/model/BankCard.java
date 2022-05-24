@@ -1,7 +1,10 @@
 package model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "bank_card")
 public class BankCard {
     private String number;
     private LocalDate expirationDate;
@@ -13,6 +16,11 @@ public class BankCard {
         this.validationCode = validationCode;
     }
 
+    public BankCard() {
+
+    }
+
+    @Id
     public String getNumber() {
         return number;
     }
@@ -21,6 +29,8 @@ public class BankCard {
         this.number = number;
     }
 
+//    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "expiration_date")
     public LocalDate getExpirationDate() {
         return expirationDate;
     }
@@ -29,6 +39,7 @@ public class BankCard {
         this.expirationDate = expirationDate;
     }
 
+    @Column(name = "validation_code")
     public String getValidationCode() {
         return validationCode;
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -19,13 +19,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="162.0" prefWidth="31.0" text="Email:" />
-      <Label layoutX="166.0" layoutY="196.0" text="Parola:" />
-      <Label layoutX="166.0" layoutY="131.0" text="Număr angajat:" />
-      <TextField fx:id="number" layoutX="270.0" layoutY="127.0" prefHeight="25.0" prefWidth="150.0" />
-      <TextField fx:id="email" layoutX="217.0" layoutY="158.0" prefHeight="25.0" prefWidth="202.0" />
-      <TextField fx:id="passwd" layoutX="217.0" layoutY="192.0" prefHeight="25.0" prefWidth="202.0" />
+      <Label layoutX="166.0" layoutY="182.0" prefWidth="31.0" text="Email:" />
+      <Label layoutX="166.0" layoutY="222.0" text="Parola:" />
+      <Label layoutX="166.0" layoutY="146.0" text="Număr angajat:" />
+      <TextField fx:id="number" layoutX="270.0" layoutY="142.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="email" layoutX="217.0" layoutY="178.0" prefHeight="25.0" prefWidth="202.0" />
       <Button layoutX="210.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleAdminLogin" text="Intră în contul de administrator" />
-      <CheckBox layoutX="174.0" layoutY="227.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="254.0" text="Prin apăsarea butonului confirmi că ești de acord cu politica de condifențialitate." wrapText="true" />
+      <PasswordField fx:id="passwd" layoutX="217.0" layoutY="218.0" prefHeight="25.0" prefWidth="202.0" />
    </children>
 </AnchorPane>

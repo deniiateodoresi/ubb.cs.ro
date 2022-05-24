@@ -24,36 +24,36 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button onAction="#handleBackToCatalogClick" layoutX="681.0" layoutY="22.0" mnemonicParsing="false" text="Înapoi la catalog" />
-      <Button layoutX="415.0" layoutY="511.0" mnemonicParsing="false" text="Plasează comanda">
+      <Button layoutX="681.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBackToCatalogClick" text="Înapoi la catalog" />
+      <Button layoutX="415.0" layoutY="511.0" mnemonicParsing="false" onAction="#handlePlaceOrder" text="Plasează comanda">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="500.0" layoutY="135.0" text="Detalii livrare">
+      <Label layoutX="497.0" layoutY="106.0" text="Detalii livrare">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="507.0" layoutY="171.0" text="Judet: " />
-      <Label layoutX="505.0" layoutY="200.0" text="Localitate:" />
-      <Label layoutX="506.0" layoutY="230.0" text="Strada:" />
-      <Label layoutX="505.0" layoutY="261.0" text="Numar:" />
-      <Label layoutX="504.0" layoutY="307.0" text="Detalii card">
+      <Label layoutX="504.0" layoutY="142.0" text="Judet: " />
+      <Label layoutX="502.0" layoutY="171.0" text="Localitate:" />
+      <Label layoutX="503.0" layoutY="201.0" text="Strada:" />
+      <Label layoutX="502.0" layoutY="232.0" text="Numar:" />
+      <Label layoutX="497.0" layoutY="332.0" text="Detalii card">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="510.0" layoutY="338.0" text="Numar Card:" />
-      <Label layoutX="508.0" layoutY="374.0" text="Data expirare:" />
-      <Label layoutX="508.0" layoutY="410.0" text="Cod validare:" />
-      <TextField layoutX="574.0" layoutY="167.0" />
-      <TextField layoutX="574.0" layoutY="196.0" />
-      <TextField layoutX="574.0" layoutY="226.0" />
-      <TextField layoutX="574.0" layoutY="257.0" />
-      <TextField layoutX="589.0" layoutY="334.0" prefHeight="25.0" prefWidth="174.0" />
-      <DatePicker layoutX="589.0" layoutY="370.0" prefHeight="25.0" prefWidth="114.0" />
-      <TextField layoutX="589.0" layoutY="406.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label layoutX="503.0" layoutY="363.0" text="Numar Card:" />
+      <Label layoutX="501.0" layoutY="399.0" text="Data expirare:" />
+      <Label layoutX="501.0" layoutY="435.0" text="Cod validare:" />
+      <TextField fx:id="judet" layoutX="571.0" layoutY="138.0" />
+      <TextField fx:id="localitate" layoutX="571.0" layoutY="167.0" />
+      <TextField fx:id="strada" layoutX="571.0" layoutY="197.0" />
+      <TextField fx:id="numarStrada" layoutX="571.0" layoutY="228.0" />
+      <TextField fx:id="numarCard" layoutX="582.0" layoutY="359.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="dataExpirare" layoutX="582.0" layoutY="395.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField fx:id="codValidare" layoutX="582.0" layoutY="431.0" prefHeight="25.0" prefWidth="68.0" />
       <Label layoutX="249.0" layoutY="456.0" prefHeight="25.0" prefWidth="114.0" text="Total:          " textAlignment="RIGHT">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -74,5 +74,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
+      <Button layoutX="573.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleSaveAddress" text="Salveaza adresa" />
+      <Button layoutX="675.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleSaveCard" text="Salveaza cardul" />
    </children>
 </AnchorPane>

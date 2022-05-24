@@ -24,7 +24,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="681.0" layoutY="22.0" mnemonicParsing="false" text="Coș de cumpărături" />
+      <Button layoutX="681.0" layoutY="22.0" mnemonicParsing="false" text="Coș de cumpărături" onAction="#handleShowCart"/>
       <Label fx:id="selectionLabel" layoutX="615.0" layoutY="231.0" text="Nu ai selectat niciun produs!">
          <font>
             <Font size="14.0" />

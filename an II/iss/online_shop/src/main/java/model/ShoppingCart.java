@@ -1,8 +1,13 @@
 package model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "shopping_cart")
 public class ShoppingCart {
     private Integer id;
     private Integer productNumber;
@@ -16,9 +21,9 @@ public class ShoppingCart {
         products = new ArrayList<>();
     }
 
-    public Client getClient() {
-        return client;
-    }
+    @OneToOne
+    @JoinColumn(name="client_id")
+    public Client getClient() { return client;  }
 
     public void setClient(Client client) {
         this.client = client;
@@ -28,10 +33,18 @@ public class ShoppingCart {
         products.add(product);
     }
 
+    @Transient
     public List<Product> getProducts(){
         return products;
     }
 
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     public Integer getId() {
         return id;
     }
@@ -40,6 +53,7 @@ public class ShoppingCart {
         this.id = id;
     }
 
+    @Column(name = "nr_products")
     public Integer getProductNumber() {
         return productNumber;
     }
@@ -48,6 +62,7 @@ public class ShoppingCart {
         this.productNumber = productNumber;
     }
 
+    @Column(name = "total_price")
     public Float getTotalPrice() {
         return totalPrice;
     }

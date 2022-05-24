@@ -1,19 +1,33 @@
 package model;
 
+
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "address")
 public class Address {
     private Integer id;
     private String county;
-    private String cities;
+    private String city;
     private String street;
     private Integer number;
 
-    public Address(String county, String cities, String street, Integer number) {
+    public Address(String county, String city, String street, Integer number) {
         this.county = county;
-        this.cities = cities;
+        this.city = city;
         this.street = street;
         this.number = number;
     }
 
+    public Address() {
+
+    }
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     public Integer getId() {
         return id;
     }
@@ -30,12 +44,12 @@ public class Address {
         this.county = county;
     }
 
-    public String getCities() {
-        return cities;
+    public String getCity() {
+        return city;
     }
 
-    public void setCities(String cities) {
-        this.cities = cities;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getStreet() {

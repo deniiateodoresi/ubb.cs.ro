@@ -8,5 +8,17 @@
       <jdbc-url>jdbc:sqlite:E:\FMI\Anul II\Semestrul II\Ingineria sistemelor soft\online_shop\database\online_shop.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="shop_orm" uuid="0c2161e8-7738-4138-80e1-b6b448725267">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\FMI\Anul II\Semestrul II\Ingineria sistemelor soft\online_shop\shop_orm.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.36.0.3/sqlite-jdbc-3.36.0.3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>

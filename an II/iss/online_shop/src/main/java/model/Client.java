@@ -1,5 +1,12 @@
 package model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "client")
 public class Client {
     private Integer id;
     private String email;
@@ -10,6 +17,13 @@ public class Client {
         this.password = password;
     }
 
+    public Client() {
+
+    }
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     public Integer getId() {
         return id;
     }

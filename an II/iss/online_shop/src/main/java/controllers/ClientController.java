@@ -69,9 +69,11 @@ public class ClientController {
         repo.addProductCartPair(selectedProduct, cart);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Online Shop");
-        alert.setHeaderText("The selected product was added to cart.");
+        alert.setHeaderText("Produsul selectat a fost adaugat in cos.");
         alert.showAndWait();
+    }
 
+    public void handleShowCart(ActionEvent actionEvent) {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("cos-cumparaturi.fxml"));
         Scene scene = null;
@@ -87,8 +89,6 @@ public class ClientController {
             e.printStackTrace();
         }
 
-        //Window window = ((Node) actionEvent.getSource()).getScene().getWindow();
-        //stage.initOwner(window);
         stage.setTitle("Online shop");
         stage.sizeToScene();
         stage.setScene(scene);
